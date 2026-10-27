@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uride — Coming Soon to Boston | Built for the Driver</title>
+    <meta name="description" content="Uride is coming soon to Greater Boston, USA. A rideshare app built for the driver with honest fares and 100% earnings transferred after every ride. Register for the pilot today.">
+    
+    <!-- Modern Typography: Outfit (Headings) & Plus Jakarta Sans (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Subtle Ambient Background Lighting -->
+    <div class="ambient-glow glow-blue"></div>
+    <div class="ambient-glow glow-orange"></div>
+    <div class="bg-grid-pattern"></div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo-wrapper">
+                <img src="assets/logo-transparent.png" alt="Uride" class="site-logo">
+            </div>
+            <div class="header-right">
+                <span class="location-badge">
+                    <span class="pulse-dot"></span>
+                    Boston Pilot Launch
+                </span>
+                <a href="#faq" class="faq-nav-link">Policies & FAQ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="main-content">
+        <div class="container layout-grid">
+            
+            <!-- Left Column: Coming Soon & Form -->
+            <section class="left-section">
+                <div class="intro-block">
+                    <div class="tag-row">
+                        <span class="status-tag">COMING SOON</span>
+                        <span class="driver-tag">BUILT FOR THE DRIVER</span>
+                    </div>
+                    <h1 class="main-title">A Rideshare App Built for the Driver</h1>
+                    <p class="main-desc">
+                        Uride is preparing for an exclusive pilot launch in Greater Boston. Experience honest fares, transparent payouts, and total schedule freedom.
+                    </p>
+
+                    <!-- Driver-First Promise Box -->
+                    <div class="promise-box">
+                        <div class="promise-icon-wrap">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <div class="promise-text">
+                            <strong>Honest Fares & 100% Earning Transferred</strong>
+                            <span>100% of your earnings are transferred directly to you after every completed ride.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Driver Registration Form -->
+                <div class="form-card">
+                    <div class="form-header">
+                        <h2 class="form-title">Driver Pre-Registration</h2>
+                        <p class="form-subtitle">Register your interest to be among the first drivers invited to the Boston pilot.</p>
+                    </div>
+
+                    <form id="driverForm" novalidate>
+                        <div class="form-group">
+                            <label for="fullName">Full Legal Name <span class="req">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="e.g. David Martinez" required>
+                            <span class="field-error" id="nameError"></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span class="req">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="(617) 000-0000" required>
+                                <span class="field-error" id="phoneError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="req">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                                <span class="field-error" id="emailError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="area">Primary Driving Area / Neighborhood in Boston <span class="req">*</span></label>
+                            <input type="text" id="area" name="area" placeholder="e.g. Boston Core, Cambridge, Allston, Quincy" required>
+                            <span class="field-error" id="areaError"></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="vehicle">Vehicle Make & Model <span class="req">*</span></label>
+                                <input type="text" id="vehicle" name="vehicle" placeholder="e.g. Toyota Camry" required>
+                                <span class="field-error" id="vehicleError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="vehicleYear">Vehicle Year <span class="req">*</span></label>
+                                <input type="text" id="vehicleYear" name="vehicleYear" placeholder="e.g. 2022" required>
+                                <span class="field-error" id="yearError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience">Current Driving Background</label>
+                            <select id="experience" name="experience">
+                                <option value="Current Rideshare Driver (Uber / Lyft)">Current Rideshare Driver (Uber / Lyft)</option>
+                                <option value="Commercial / Taxi / Livery">Commercial / Taxi / Livery</option>
+                                <option value="Delivery Driver">Delivery Driver</option>
+                                <option value="New to Rideshare">New to Rideshare</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comments">Additional Notes / Preferred Hours (Optional)</label>
+                            <textarea id="comments" name="comments" rows="3" placeholder="Tell us about your driving preferences or any questions..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span>Register for Boston Pilot</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <!-- Success Confirmation -->
+                    <div class="success-box" id="successBox" style="display: none;">
+                        <div class="success-icon">✓</div>
+                        <h3>You're on the Boston Pilot Roster!</h3>
+                        <p id="successMessage">Thank you! Your registration has been received. We will contact you with onboarding instructions as pilot runs begin.</p>
+                        <button type="button" class="btn-reset" id="registerAnotherBtn">Register another driver</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Column: QR Code & Sharing Hub -->
+            <aside class="right-section">
+                <!-- QR Code Card -->
+                <div class="qr-card">
+                    <div class="qr-card-header">
+                        <span class="qr-tag">SCAN & SHARE</span>
+                        <h3>Scan to Open on Mobile</h3>
+                        <p class="qr-desc">Scan with your smartphone camera to load this page directly on your phone or share it with other drivers.</p>
+                    </div>
+
+                    <div class="qr-canvas-wrapper">
+                        <canvas id="qrCanvas" width="220" height="220"></canvas>
+                    </div>
+
+                    <div class="qr-url-pill">
+                        <span class="url-dot"></span>
+                        <span id="qrUrlLabel">https://urideboston.com</span>
+                    </div>
+
+                    <div class="qr-actions">
+                        <button type="button" class="btn-secondary" id="downloadQrBtn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span>Download QR Code</span>
+                        </button>
+                        <button type="button" class="btn-secondary" id="copyLinkBtn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            <span>Copy Page Link</span>
+                        </button>
+                    </div>
+
+                    <!-- Social Sharing Links -->
+                    <div class="social-share-wrap">
+                        <span class="share-label">Share with fellow drivers:</span>
+                        <div class="social-grid">
+                            <a href="#" id="shareWhatsApp" class="social-btn btn-wa" target="_blank" rel="noopener" aria-label="Share on WhatsApp">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.696c1 .587 1.809.914 2.806.914 3.181 0 5.767-2.586 5.767-5.766.001-3.182-2.585-5.767-5.767-5.767zm7.653 5.766c.002 4.223-3.432 7.657-7.654 7.657-1.334 0-2.581-.347-3.669-.955l-4.361 1.144 1.164-4.249c-.696-1.147-1.065-2.477-1.066-3.842-.002-4.223 3.432-7.657 7.654-7.657 4.222 0 7.654 3.434 7.655 7.657z"/>
+                                </svg>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a href="#" id="shareFacebook" class="social-btn btn-fb" target="_blank" rel="noopener" aria-label="Share on Facebook">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" id="shareTwitter" class="social-btn btn-tw" target="_blank" rel="noopener" aria-label="Share on X / Twitter">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                                <span>X / Twitter</span>
+                            </a>
+                            <button type="button" id="shareInstagram" class="social-btn btn-ig" aria-label="Share on Instagram">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                                <span>Instagram</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Short Pilot Info Card -->
+                <div class="info-card">
+                    <h4>Boston Pilot Snapshot</h4>
+                    <ul class="info-list">
+                        <li>
+                            <span class="info-label">Platform:</span>
+                            <span class="info-val">Uride</span>
+                        </li>
+                        <li>
+                            <span class="info-label">Mission:</span>
+                            <span class="info-val">Built for the Driver</span>
+                        </li>
+                        <li>
+                            <span class="info-label">Earnings:</span>
+                            <span class="info-val text-blue">100% Transferred After Ride</span>
+                        </li>
+                        <li>
+                            <span class="info-label">Launch Area:</span>
+                            <span class="info-val">Greater Boston, MA</span>
+                        </li>
+                        <li>
+                            <span class="info-label">Status:</span>
+                            <span class="info-val text-orange">Pilot Driver Enrollment</span>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Footer with FAQ & Policies Section -->
+    <footer class="site-footer" id="faq">
+        <div class="container footer-container">
+            
+            <!-- Embedded FAQ & Policy Details -->
+            <div class="footer-faq-block">
+                <div class="faq-header">
+                    <span class="faq-tag">POLICIES & DETAILS</span>
+                    <h2 class="faq-title">Frequently Asked Questions</h2>
+                    <p class="faq-subtitle">Clear information regarding our payout model, deductions, and Boston pilot policies.</p>
+                </div>
+
+                <div class="faq-list">
+                    <details class="faq-item" open>
+                        <summary class="faq-question">
+                            <span>How does the 100% earning transfer work?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Uride is built with a driver-first philosophy. The fare paid by the rider for the trip is transferred directly to the driver once the ride is completed. Unlike legacy platforms, we do not take 40% to 50% arbitrary commission cuts.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item" open>
+                        <summary class="faq-question">
+                            <span>What deductions apply to my earnings?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>To ensure full transparency: standard bank processing charges for electronic fund transfers and required commercial ride insurance are deducted. There are zero hidden platform markups—every deduction is itemized clearly on your trip summary.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>When and where is the pilot launching?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>The initial pilot is limited to Greater Boston, Massachusetts (including Boston Core, Cambridge, Somerville, Allston/Brighton, and neighboring areas). Registered drivers will receive rolling invitations as pilot batches open.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Can I drive for Uride while also driving for other apps?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes. You are completely independent. Participating in our Boston pilot runs does not prevent you from using other platforms.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>What are the basic driver and vehicle requirements?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>A valid Massachusetts driver's license, an eligible 4-door vehicle in clean mechanical condition, and standard personal auto insurance. Further onboarding instructions will be shared prior to your first pilot run.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom-bar">
+                <div class="footer-brand-info">
+                    <img src="assets/logo-transparent.png" alt="Uride" class="footer-logo">
+                    <p class="footer-copy">&copy; 2026 Uride. All rights reserved. • Boston, Massachusetts</p>
+                </div>
+                <div class="footer-back-to-top">
+                    <button type="button" class="btn-roster-link" id="openRosterModalBtn">Driver Roster & Export</button>
+                    <span class="sep">•</span>
+                    <a href="#" class="btn-top">Back to top ↑</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Admin Roster & Google Sheet Webhook Modal -->
+    <div class="modal-backdrop" id="rosterModalBackdrop" style="display: none;">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3>Boston Pilot Driver Submissions</h3>
+                <button type="button" class="modal-close" id="closeRosterModalBtn">&times;</button>
+            </div>
+            
+            <div class="roster-toolbar">
+                <p class="roster-info">Records sent to <strong>brandaovicente4@gmail.com</strong> and saved locally.</p>
+                <button type="button" class="btn-export-csv" id="exportCsvBtn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span>Export to Excel (CSV)</span>
+                </button>
+            </div>
+
+            <!-- Optional Google Sheets Webhook Configuration -->
+            <div class="google-sheet-config">
+                <label for="googleSheetUrlInput">Google Sheet Webhook URL (Optional):</label>
+                <div class="config-input-row">
+                    <input type="text" id="googleSheetUrlInput" placeholder="https://script.google.com/macros/s/.../exec">
+                    <button type="button" id="saveSheetUrlBtn" class="btn-save-sheet">Save Webhook</button>
+                </div>
+                <small>See <code>google_sheet_integration.js</code> in project files for 1-minute Google Sheets setup instructions.</small>
+            </div>
+
+            <div class="roster-table-wrapper">
+                <table class="roster-table" id="rosterTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Area</th>
+                            <th>Vehicle</th>
+                            <th>Background</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rosterTableBody">
+                        <!-- Rendered by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Generator Library -->
+    <script src="assets/qrcode.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

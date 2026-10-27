@@ -1,0 +1,5 @@
+# Private documents & temporary files
+WhatsApp Image*.jpeg
+*.log
+.DS_Store
+Thumbs.db
