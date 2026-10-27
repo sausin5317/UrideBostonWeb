@@ -8,7 +8,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY . /usr/share/nginx/html
 
 # Clean up unwanted files from container image
-RUN rm -f /usr/share/nginx/html/Dockerfile /usr/share/nginx/html/nginx.conf
+RUN rm -rf /usr/share/nginx/html/Dockerfile /usr/share/nginx/html/nginx.conf /usr/share/nginx/html/cloudbuild.yaml /usr/share/nginx/html/*.md /usr/share/nginx/html/*.ps1
 
 # Cloud Run default port
 EXPOSE 8080

@@ -1,0 +1,11 @@
+.git
+.gitignore
+.github
+*.ps1
+*.md
+cloudbuild.yaml
+WhatsApp Image*
+*.log
+analyze_logo.ps1
+Logo.jpeg
+logo-clean.png
