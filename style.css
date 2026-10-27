@@ -75,6 +75,18 @@ body {
     position: relative;
 }
 
+/* Touch and Tap Optimizations for Mobile */
+button, a, input, select, textarea, summary {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Smooth Navigation Offsets for Sticky Header */
+#register,
+#faq {
+    scroll-margin-top: 80px;
+}
+
 /* ==========================================================================
    AMBIENT BACKGROUND LIGHTING & TEXTURE
    ========================================================================== */
@@ -1471,6 +1483,49 @@ textarea {
     }
 }
 
+/* Compact Mobile Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .header-container {
+        gap: 8px;
+    }
+
+    .site-logo {
+        height: 32px;
+    }
+
+    .header-right {
+        gap: 6px;
+    }
+
+    .location-badge {
+        font-size: 0.70rem;
+        padding: 4px 8px;
+        white-space: nowrap;
+    }
+
+    .faq-nav-link {
+        font-size: 0.74rem;
+        padding: 4px 6px;
+        white-space: nowrap;
+    }
+
+    .promise-box {
+        padding: 12px 14px;
+        gap: 10px;
+    }
+
+    .promise-icon-wrap {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+    }
+
+    .promise-icon-wrap svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
 /* Extra Small Phones (max-width: 380px) */
 @media (max-width: 380px) {
     .container {
@@ -1482,12 +1537,49 @@ textarea {
     }
 
     .main-title {
-        font-size: 1.7rem;
+        font-size: 1.65rem;
     }
 
     #qrCanvas {
         width: 160px !important;
         height: 160px !important;
+    }
+}
+
+/* Ultra-Compact Phones (max-width: 350px) */
+@media (max-width: 350px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .site-logo {
+        height: 28px;
+    }
+
+    .location-badge {
+        font-size: 0.66rem;
+        padding: 3px 6px;
+    }
+
+    .faq-nav-link {
+        font-size: 0.68rem;
+        padding: 3px 4px;
+    }
+
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    .form-card,
+    .qr-card,
+    .info-card {
+        padding: 18px 12px;
+        border-radius: 14px;
+    }
+
+    #qrCanvas {
+        width: 140px !important;
+        height: 140px !important;
     }
 }
 
