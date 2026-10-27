@@ -1108,30 +1108,167 @@ textarea {
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN (TABLETS & MOBILE)
+   RESPONSIVE DESIGN (TABLETS, PHONES & MOBILE SCREENS)
    ========================================================================== */
-@media (max-width: 960px) {
+
+/* Tablets & Small Laptops (max-width: 992px) */
+@media (max-width: 992px) {
     .layout-grid {
         grid-template-columns: 1fr;
-        gap: 36px;
+        gap: 40px;
     }
 
     .main-title {
-        font-size: 2.5rem;
+        font-size: 2.6rem;
     }
 
     .form-card {
-        padding: 28px 22px;
+        padding: 32px 24px;
     }
 
     .qr-card {
-        padding: 28px 22px;
+        padding: 30px 24px;
+    }
+
+    .info-card {
+        padding: 24px 20px;
     }
 }
 
-@media (max-width: 600px) {
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 18px;
+    }
+
+    .main-content {
+        padding: 36px 0 54px;
+    }
+
     .main-title {
-        font-size: 2.1rem;
+        font-size: 2.3rem;
+    }
+
+    .main-desc {
+        font-size: 1.05rem;
+    }
+
+    .faq-title {
+        font-size: 1.8rem;
+    }
+
+    .faq-question {
+        padding: 16px 18px;
+        font-size: 0.98rem;
+    }
+
+    .faq-answer {
+        padding: 0 18px 18px;
+    }
+
+    .modal-box {
+        padding: 24px 18px;
+        width: 94vw;
+    }
+}
+
+/* Mobile Phones (max-width: 600px) */
+@media (max-width: 600px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .header {
+        padding: 12px 0;
+    }
+
+    .site-logo {
+        height: 36px;
+    }
+
+    .header-right {
+        gap: 10px;
+    }
+
+    .location-badge {
+        font-size: 0.76rem;
+        padding: 5px 12px;
+    }
+
+    .faq-nav-link {
+        font-size: 0.82rem;
+        padding: 4px 8px;
+    }
+
+    .main-content {
+        padding: 24px 0 44px;
+    }
+
+    .tag-row {
+        gap: 8px;
+        margin-bottom: 14px;
+    }
+
+    .status-tag,
+    .driver-tag {
+        font-size: 0.72rem;
+        padding: 4px 11px;
+    }
+
+    .main-title {
+        font-size: clamp(1.85rem, 6.5vw, 2.2rem);
+        line-height: 1.18;
+        margin-bottom: 12px;
+    }
+
+    .main-desc {
+        font-size: 0.98rem;
+        line-height: 1.55;
+        margin-bottom: 20px;
+    }
+
+    .promise-box {
+        padding: 14px 16px;
+        margin-bottom: 26px;
+        gap: 12px;
+    }
+
+    .promise-icon-wrap {
+        width: 40px;
+        height: 40px;
+    }
+
+    .promise-text strong {
+        font-size: 0.98rem;
+        line-height: 1.25;
+    }
+
+    .promise-text span {
+        font-size: 0.88rem;
+        line-height: 1.45;
+    }
+
+    /* Form Mobile Card */
+    .form-card {
+        padding: 22px 16px;
+        border-radius: 18px;
+    }
+
+    .form-header {
+        margin-bottom: 20px;
+        padding-bottom: 14px;
+    }
+
+    .form-title {
+        font-size: 1.4rem;
+    }
+
+    .form-subtitle {
+        font-size: 0.86rem;
+    }
+
+    .form-group {
+        margin-bottom: 16px;
     }
 
     .form-row {
@@ -1139,16 +1276,218 @@ textarea {
         gap: 0;
     }
 
-    .social-grid {
-        grid-template-columns: 1fr;
+    /* 16px font-size prevents iOS automatic zoom-in on inputs */
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select,
+    textarea {
+        font-size: 16px;
+        padding: 13px 14px;
+        border-radius: var(--radius-sm);
     }
 
-    .header-container {
-        flex-direction: row;
+    label {
+        font-size: 0.82rem;
+        margin-bottom: 6px;
+    }
+
+    .submit-btn {
+        padding: 15px 20px;
+        font-size: 1rem;
+        border-radius: var(--radius-sm);
+    }
+
+    /* QR & Sharing Card on Mobile */
+    .qr-card {
+        padding: 24px 16px;
+        border-radius: 18px;
+    }
+
+    .qr-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .qr-desc {
+        font-size: 0.85rem;
+    }
+
+    .qr-canvas-wrapper {
+        padding: 10px;
+        border-radius: 12px;
+        margin: 6px auto 14px;
+    }
+
+    #qrCanvas {
+        width: 190px !important;
+        height: 190px !important;
+        max-width: 100%;
+    }
+
+    .qr-url-pill {
+        font-size: 0.74rem;
+        padding: 5px 12px;
+        margin-bottom: 16px;
+    }
+
+    .qr-actions {
+        gap: 8px;
+        margin-bottom: 18px;
+    }
+
+    .btn-secondary {
+        padding: 11px 14px;
+        font-size: 0.88rem;
+    }
+
+    .social-share-wrap {
+        padding-top: 18px;
+    }
+
+    .share-label {
+        font-size: 0.74rem;
+        margin-bottom: 10px;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .social-btn {
+        padding: 10px 10px;
+        font-size: 0.8rem;
+    }
+
+    /* Info Snapshot */
+    .info-card {
+        padding: 20px 16px;
+        border-radius: 18px;
+    }
+
+    .info-card h4 {
+        font-size: 1.05rem;
+        margin-bottom: 12px;
+    }
+
+    .info-list {
+        gap: 10px;
+    }
+
+    .info-list li {
+        font-size: 0.84rem;
+    }
+
+    /* Footer FAQ & Policies */
+    .site-footer {
+        padding: 44px 0 28px;
+    }
+
+    .footer-faq-block {
+        margin-bottom: 36px;
+    }
+
+    .faq-title {
+        font-size: 1.6rem;
+    }
+
+    .faq-subtitle {
+        font-size: 0.88rem;
+    }
+
+    .faq-question {
+        padding: 15px 16px;
+        font-size: 0.94rem;
+        gap: 12px;
+    }
+
+    .faq-icon {
+        font-size: 1.25rem;
+    }
+
+    .faq-answer {
+        padding: 0 16px 16px;
+        font-size: 0.88rem;
+        line-height: 1.55;
     }
 
     .footer-bottom-bar {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
+        gap: 14px;
+    }
+
+    .footer-brand-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .footer-copy {
+        font-size: 0.78rem;
+    }
+
+    /* Admin Roster Modal Mobile */
+    .modal-box {
+        width: 95vw;
+        max-height: 94vh;
+        padding: 20px 14px;
+        border-radius: 16px;
+    }
+
+    .modal-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .roster-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .btn-export-csv {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .config-input-row {
+        flex-direction: column;
+    }
+
+    .btn-save-sheet {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .roster-table-wrapper {
+        max-height: 300px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .roster-table {
+        white-space: nowrap;
     }
 }
+
+/* Extra Small Phones (max-width: 380px) */
+@media (max-width: 380px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-title {
+        font-size: 1.7rem;
+    }
+
+    #qrCanvas {
+        width: 160px !important;
+        height: 160px !important;
+    }
+}
+
