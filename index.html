@@ -326,57 +326,6 @@
         </div>
     </footer>
 
-    <!-- Admin Roster & Google Sheet Webhook Modal -->
-    <div class="modal-backdrop" id="rosterModalBackdrop" style="display: none;">
-        <div class="modal-box">
-            <div class="modal-header">
-                <h3>Boston Pilot Driver Submissions</h3>
-                <button type="button" class="modal-close" id="closeRosterModalBtn">&times;</button>
-            </div>
-            
-            <div class="roster-toolbar">
-                <p class="roster-info">Records sent to <strong>brandaovicente4@gmail.com</strong> and saved locally.</p>
-                <button type="button" class="btn-export-csv" id="exportCsvBtn">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    <span>Export to Excel (CSV)</span>
-                </button>
-            </div>
-
-            <!-- Optional Google Sheets Webhook Configuration -->
-            <div class="google-sheet-config">
-                <label for="googleSheetUrlInput">Google Sheet Webhook URL (Optional):</label>
-                <div class="config-input-row">
-                    <input type="text" id="googleSheetUrlInput" placeholder="https://script.google.com/macros/s/.../exec">
-                    <button type="button" id="saveSheetUrlBtn" class="btn-save-sheet">Save Webhook</button>
-                </div>
-                <small>See <code>google_sheet_integration.js</code> in project files for 1-minute Google Sheets setup instructions.</small>
-            </div>
-
-            <div class="roster-table-wrapper">
-                <table class="roster-table" id="rosterTable">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Email</th>
-                            <th>Area</th>
-                            <th>Vehicle</th>
-                            <th>Background</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-                    <tbody id="rosterTableBody">
-                        <!-- Rendered by JS -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
     <!-- QR Generator Library -->
     <script src="assets/qrcode.min.js"></script>
     <script src="app.js"></script>

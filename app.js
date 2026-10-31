@@ -18,9 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Render Scannable QR Code
     if (qrCanvas && window.QRCodeGenerator) {
         window.QRCodeGenerator.renderToCanvas(qrCanvas, targetUrl, {
-            size: 220,
-            margin: 12,
-            foreground: '#0A2558', // Deep Navy from logo
+            size: 240,
+            foreground: '#000000', // Pure high-contrast black for instant phone camera detection
             background: '#FFFFFF',
             correctLevel: 1 // Level M
         });
@@ -238,115 +237,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (successBox) {
                 successBox.style.display = 'none';
             }
-        });
-    }
-
-    // Admin Roster Modal & CSV Export
-    var rosterModal = document.getElementById('rosterModalBackdrop');
-    var openRosterBtn = document.getElementById('openRosterModalBtn');
-    var closeRosterBtn = document.getElementById('closeRosterModalBtn');
-    var exportCsvBtn = document.getElementById('exportCsvBtn');
-    var rosterTableBody = document.getElementById('rosterTableBody');
-    var googleSheetUrlInput = document.getElementById('googleSheetUrlInput');
-    var saveSheetUrlBtn = document.getElementById('saveSheetUrlBtn');
-
-    if (googleSheetUrlInput) {
-        googleSheetUrlInput.value = localStorage.getItem('uride_google_sheet_webhook') || '';
-    }
-
-    if (saveSheetUrlBtn && googleSheetUrlInput) {
-        saveSheetUrlBtn.addEventListener('click', function () {
-            var val = googleSheetUrlInput.value.trim();
-            localStorage.setItem('uride_google_sheet_webhook', val);
-            saveSheetUrlBtn.textContent = 'Saved!';
-            setTimeout(function () { saveSheetUrlBtn.textContent = 'Save Webhook'; }, 2000);
-        });
-    }
-
-    function renderRoster() {
-        if (!rosterTableBody) return;
-        rosterTableBody.innerHTML = '';
-        var submissions = [];
-        try {
-            submissions = JSON.parse(localStorage.getItem('uride_driver_registrations') || '[]');
-        } catch (e) { submissions = []; }
-
-        if (submissions.length === 0) {
-            rosterTableBody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding: 24px; color: #64748B;">No driver registrations recorded yet. Submit the form to see records appear here.</td></tr>';
-            return;
-        }
-
-        submissions.slice().reverse().forEach(function (rec) {
-            var tr = document.createElement('tr');
-            tr.innerHTML = `
-                <td><strong>${escapeHtml(rec["Full Name"] || rec.name || '')}</strong></td>
-                <td>${escapeHtml(rec["Phone Number"] || rec.phone || '')}</td>
-                <td>${escapeHtml(rec["Email Address"] || rec.email || '')}</td>
-                <td>${escapeHtml(rec["Boston Area"] || rec.area || '')}</td>
-                <td>${escapeHtml(rec["Vehicle"] || rec.vehicle || '')}</td>
-                <td>${escapeHtml(rec["Driving Background"] || rec.experience || '')}</td>
-                <td style="color: #64748B; font-size: 0.78rem;">${escapeHtml(rec["Submitted At"] || rec.submittedAt || '')}</td>
-            `;
-            rosterTableBody.appendChild(tr);
-        });
-    }
-
-    if (openRosterBtn && rosterModal) {
-        openRosterBtn.addEventListener('click', function () {
-            renderRoster();
-            rosterModal.style.display = 'flex';
-        });
-    }
-
-    if (closeRosterBtn && rosterModal) {
-        closeRosterBtn.addEventListener('click', function () {
-            rosterModal.style.display = 'none';
-        });
-    }
-
-    if (rosterModal) {
-        rosterModal.addEventListener('click', function (e) {
-            if (e.target === rosterModal) {
-                rosterModal.style.display = 'none';
-            }
-        });
-    }
-
-    // Export to Excel / CSV
-    if (exportCsvBtn) {
-        exportCsvBtn.addEventListener('click', function () {
-            var submissions = [];
-            try {
-                submissions = JSON.parse(localStorage.getItem('uride_driver_registrations') || '[]');
-            } catch (e) { submissions = []; }
-
-            if (submissions.length === 0) {
-                alert('No driver submissions to export.');
-                return;
-            }
-
-            var headers = ["Full Name", "Phone Number", "Email Address", "Boston Area", "Vehicle", "Driving Background", "Notes", "Date"];
-            var rows = submissions.map(function (d) {
-                return [
-                    `"${d["Full Name"] || d.name || ''}"`,
-                    `"${d["Phone Number"] || d.phone || ''}"`,
-                    `"${d["Email Address"] || d.email || ''}"`,
-                    `"${d["Boston Area"] || d.area || ''}"`,
-                    `"${d["Vehicle"] || d.vehicle || ''}"`,
-                    `"${d["Driving Background"] || d.experience || ''}"`,
-                    `"${d["Notes / Availability"] || d.notes || ''}"`,
-                    `"${d["Submitted At"] || d.submittedAt || ''}"`
-                ].join(',');
-            });
-
-            var csvContent = 'data:text/csv;charset=utf-8,\uFEFF' + [headers.join(','), ...rows].join('\n');
-            var encodedUri = encodeURI(csvContent);
-            var link = document.createElement('a');
-            link.setAttribute('href', encodedUri);
-            link.setAttribute('download', 'Uride_Boston_Registered_Drivers.csv');
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
         });
     }
 
