@@ -92,10 +92,10 @@ This project is configured for automated CI/CD deployment on **Google Cloud Run*
 
 5. Click **"Create"**. Cloud Build will build the container image and deploy the live URL (e.g., `https://uride-boston-web-xxxx.a.run.app`).
 
-### 3. Custom Domain Setup (e.g., `urideboston.com`)
+### 3. Custom Domain Setup (e.g., `urideadu.com`)
 1. In Cloud Run, navigate to **Manage Custom Domains** -> **Add Mapping**.
 2. Select the service `uride-boston-web`.
-3. Enter your verified domain name (e.g., `urideboston.com` or `www.urideboston.com`).
+3. Enter your verified domain name (e.g., `urideadu.com` or `www.urideadu.com`).
 4. Update your DNS registrar with the provided `CNAME` or `A`/`AAAA` records.
 5. Google Cloud will automatically provision and renew a free SSL/TLS certificate.
 
