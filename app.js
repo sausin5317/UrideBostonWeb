@@ -4,7 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     // Target URL for QR Code & redirection (MUST include https:// so smartphone cameras trigger direct website link prompt)
-    var targetUrl = 'https://www.urideadu.com';
+    var targetUrl = 'https://www.uride-app.com/';
 
     var qrCanvas = document.getElementById('qrCanvas');
     var qrUrlLabel = document.getElementById('qrUrlLabel');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (downloadQrBtn && qrCanvas) {
         downloadQrBtn.addEventListener('click', function () {
             var link = document.createElement('a');
-            link.download = 'uride-adu-qr.png';
+            link.download = 'uride-app-qr.png';
             link.href = qrCanvas.toDataURL('image/png');
             link.click();
         });
