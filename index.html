@@ -28,9 +28,14 @@
             <div class="header-right">
                 <span class="location-badge">
                     <span class="pulse-dot"></span>
-                    Boston Pilot Launch
+                    <span data-i18n="header.locationBadge">Boston Pilot Launch</span>
                 </span>
-                <a href="#faq" class="faq-nav-link">Policies & FAQ</a>
+                <a href="#faq" class="faq-nav-link" data-i18n="header.faqLink">Policies & FAQ</a>
+                <div class="lang-switcher" role="group" aria-label="Language selector">
+                    <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true" title="English">EN</button>
+                    <button type="button" class="lang-btn" data-lang="es" aria-pressed="false" title="Español">ES</button>
+                    <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false" title="Português">PT</button>
+                </div>
             </div>
         </div>
     </header>
@@ -43,11 +48,11 @@
             <section class="left-section" id="register">
                 <div class="intro-block">
                     <div class="tag-row">
-                        <span class="status-tag">COMING SOON</span>
-                        <span class="driver-tag">BUILT FOR THE DRIVER</span>
+                        <span class="status-tag" data-i18n="hero.statusTag">COMING SOON</span>
+                        <span class="driver-tag" data-i18n="hero.driverTag">BUILT FOR THE DRIVER</span>
                     </div>
-                    <h1 class="main-title">A Rideshare App Built for the Driver</h1>
-                    <p class="main-desc">
+                    <h1 class="main-title" data-i18n="hero.title">A Rideshare App Built for the Driver</h1>
+                    <p class="main-desc" data-i18n="hero.desc">
                         Uride is preparing for an exclusive pilot launch in Greater Boston. Experience honest fares, transparent payouts, and total schedule freedom.
                     </p>
 
@@ -59,8 +64,8 @@
                             </svg>
                         </div>
                         <div class="promise-text">
-                            <strong>Honest Fares & 100% Earning Transferred</strong>
-                            <span>100% of your earnings are transferred directly to you after every completed ride.</span>
+                            <strong data-i18n="hero.promiseTitle">Honest Fares & 100% Earning Transferred</strong>
+                            <span data-i18n="hero.promiseDesc">100% of your earnings are transferred directly to you after every completed ride.</span>
                         </div>
                     </div>
                 </div>
@@ -68,66 +73,66 @@
                 <!-- Driver Registration Form -->
                 <div class="form-card">
                     <div class="form-header">
-                        <h2 class="form-title">Driver Pre-Registration</h2>
-                        <p class="form-subtitle">Register your interest to be among the first drivers invited to the Boston pilot.</p>
+                        <h2 class="form-title" data-i18n="form.title">Driver Pre-Registration</h2>
+                        <p class="form-subtitle" data-i18n="form.subtitle">Register your interest to be among the first drivers invited to the Boston pilot.</p>
                     </div>
 
                     <form id="driverForm" novalidate>
                         <div class="form-group">
-                            <label for="fullName">Full Legal Name <span class="req">*</span></label>
-                            <input type="text" id="fullName" name="fullName" placeholder="e.g. David Martinez" required>
+                            <label for="fullName"><span data-i18n="form.fullNameLabel">Full Legal Name</span> <span class="req">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="e.g. David Martinez" data-i18n-placeholder="form.fullNamePlaceholder" required>
                             <span class="field-error" id="nameError"></span>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="phone">Phone Number <span class="req">*</span></label>
-                                <input type="tel" id="phone" name="phone" placeholder="(617) 000-0000" required>
+                                <label for="phone"><span data-i18n="form.phoneLabel">Phone Number</span> <span class="req">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="(617) 000-0000" data-i18n-placeholder="form.phonePlaceholder" required>
                                 <span class="field-error" id="phoneError"></span>
                             </div>
                             <div class="form-group">
-                                <label for="email">Email Address <span class="req">*</span></label>
-                                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                                <label for="email"><span data-i18n="form.emailLabel">Email Address</span> <span class="req">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="name@example.com" data-i18n-placeholder="form.emailPlaceholder" required>
                                 <span class="field-error" id="emailError"></span>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="area">Primary Driving Area / Neighborhood in Boston <span class="req">*</span></label>
-                            <input type="text" id="area" name="area" placeholder="e.g. Boston Core, Cambridge, Allston, Quincy" required>
+                            <label for="area"><span data-i18n="form.areaLabel">Primary Driving Area / Neighborhood in Boston</span> <span class="req">*</span></label>
+                            <input type="text" id="area" name="area" placeholder="e.g. Boston Core, Cambridge, Allston, Quincy" data-i18n-placeholder="form.areaPlaceholder" required>
                             <span class="field-error" id="areaError"></span>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="vehicle">Vehicle Make & Model <span class="req">*</span></label>
-                                <input type="text" id="vehicle" name="vehicle" placeholder="e.g. Toyota Camry" required>
+                                <label for="vehicle"><span data-i18n="form.vehicleLabel">Vehicle Make & Model</span> <span class="req">*</span></label>
+                                <input type="text" id="vehicle" name="vehicle" placeholder="e.g. Toyota Camry" data-i18n-placeholder="form.vehiclePlaceholder" required>
                                 <span class="field-error" id="vehicleError"></span>
                             </div>
                             <div class="form-group">
-                                <label for="vehicleYear">Vehicle Year <span class="req">*</span></label>
-                                <input type="text" id="vehicleYear" name="vehicleYear" placeholder="e.g. 2022" required>
+                                <label for="vehicleYear"><span data-i18n="form.vehicleYearLabel">Vehicle Year</span> <span class="req">*</span></label>
+                                <input type="text" id="vehicleYear" name="vehicleYear" placeholder="e.g. 2022" data-i18n-placeholder="form.vehicleYearPlaceholder" required>
                                 <span class="field-error" id="yearError"></span>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="experience">Current Driving Background</label>
+                            <label for="experience" data-i18n="form.experienceLabel">Current Driving Background</label>
                             <select id="experience" name="experience">
-                                <option value="Current Rideshare Driver (Uber / Lyft)">Current Rideshare Driver (Uber / Lyft)</option>
-                                <option value="Commercial / Taxi / Livery">Commercial / Taxi / Livery</option>
-                                <option value="Delivery Driver">Delivery Driver</option>
-                                <option value="New to Rideshare">New to Rideshare</option>
+                                <option value="Current Rideshare Driver (Uber / Lyft)" data-i18n="form.expOption1">Current Rideshare Driver (Uber / Lyft)</option>
+                                <option value="Commercial / Taxi / Livery" data-i18n="form.expOption2">Commercial / Taxi / Livery</option>
+                                <option value="Delivery Driver" data-i18n="form.expOption3">Delivery Driver</option>
+                                <option value="New to Rideshare" data-i18n="form.expOption4">New to Rideshare</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="comments">Additional Notes / Preferred Hours (Optional)</label>
-                            <textarea id="comments" name="comments" rows="3" placeholder="Tell us about your driving preferences or any questions..."></textarea>
+                            <label for="comments" data-i18n="form.commentsLabel">Additional Notes / Preferred Hours (Optional)</label>
+                            <textarea id="comments" name="comments" rows="3" placeholder="Tell us about your driving preferences or any questions..." data-i18n-placeholder="form.commentsPlaceholder"></textarea>
                         </div>
 
                         <button type="submit" class="submit-btn" id="submitBtn">
-                            <span>Register for Boston Pilot</span>
+                            <span id="submitBtnText" data-i18n="form.submitBtn">Register for Boston Pilot</span>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                                 <polyline points="12 5 19 12 12 19"></polyline>
@@ -138,9 +143,9 @@
                     <!-- Success Confirmation -->
                     <div class="success-box" id="successBox" style="display: none;">
                         <div class="success-icon">✓</div>
-                        <h3>You're on the Boston Pilot Roster!</h3>
-                        <p id="successMessage">Thank you! Your registration has been received. We will contact you with onboarding instructions as pilot runs begin.</p>
-                        <button type="button" class="btn-reset" id="registerAnotherBtn">Register another driver</button>
+                        <h3 data-i18n="form.successTitle">You're on the Boston Pilot Roster!</h3>
+                        <p id="successMessage" data-i18n="form.successDefaultMsg">Thank you! Your registration has been received. We will contact you with onboarding instructions as pilot runs begin.</p>
+                        <button type="button" class="btn-reset" id="registerAnotherBtn" data-i18n="form.registerAnotherBtn">Register another driver</button>
                     </div>
                 </div>
             </section>
@@ -150,9 +155,9 @@
                 <!-- QR Code Card -->
                 <div class="qr-card">
                     <div class="qr-card-header">
-                        <span class="qr-tag">SCAN & SHARE</span>
-                        <h3>Scan to Open on Mobile</h3>
-                        <p class="qr-desc">Scan with your smartphone camera to load this page directly on your phone or share it with other drivers.</p>
+                        <span class="qr-tag" data-i18n="qr.tag">SCAN & SHARE</span>
+                        <h3 data-i18n="qr.title">Scan to Open on Mobile</h3>
+                        <p class="qr-desc" data-i18n="qr.desc">Scan with your smartphone camera to load this page directly on your phone or share it with other drivers.</p>
                     </div>
 
                     <div class="qr-canvas-wrapper">
@@ -171,20 +176,20 @@
                                 <polyline points="7 10 12 15 17 10"></polyline>
                                 <line x1="12" y1="15" x2="12" y2="3"></line>
                             </svg>
-                            <span>Download QR Code</span>
+                            <span data-i18n="qr.downloadBtn">Download QR Code</span>
                         </button>
                         <button type="button" class="btn-secondary" id="copyLinkBtn">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                             </svg>
-                            <span>Copy Page Link</span>
+                            <span id="copyLinkBtnText" data-i18n="qr.copyBtn">Copy Page Link</span>
                         </button>
                     </div>
 
                     <!-- Social Sharing Links -->
                     <div class="social-share-wrap">
-                        <span class="share-label">Share with fellow drivers:</span>
+                        <span class="share-label" data-i18n="qr.shareLabel">Share with fellow drivers:</span>
                         <div class="social-grid">
                             <a href="#" id="shareWhatsApp" class="social-btn btn-wa" target="_blank" rel="noopener" aria-label="Share on WhatsApp">
                                 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
@@ -216,27 +221,27 @@
 
                 <!-- Short Pilot Info Card -->
                 <div class="info-card">
-                    <h4>Boston Pilot Snapshot</h4>
+                    <h4 data-i18n="info.title">Boston Pilot Snapshot</h4>
                     <ul class="info-list">
                         <li>
-                            <span class="info-label">Platform:</span>
+                            <span class="info-label" data-i18n="info.platformLabel">Platform:</span>
                             <span class="info-val">Uride</span>
                         </li>
                         <li>
-                            <span class="info-label">Mission:</span>
-                            <span class="info-val">Built for the Driver</span>
+                            <span class="info-label" data-i18n="info.missionLabel">Mission:</span>
+                            <span class="info-val" data-i18n="info.missionVal">Built for the Driver</span>
                         </li>
                         <li>
-                            <span class="info-label">Earnings:</span>
-                            <span class="info-val text-blue">100% Transferred After Ride</span>
+                            <span class="info-label" data-i18n="info.earningsLabel">Earnings:</span>
+                            <span class="info-val text-blue" data-i18n="info.earningsVal">100% Transferred After Ride</span>
                         </li>
                         <li>
-                            <span class="info-label">Launch Area:</span>
-                            <span class="info-val">Greater Boston, MA</span>
+                            <span class="info-label" data-i18n="info.areaLabel">Launch Area:</span>
+                            <span class="info-val" data-i18n="info.areaVal">Greater Boston, MA</span>
                         </li>
                         <li>
-                            <span class="info-label">Status:</span>
-                            <span class="info-val text-orange">Pilot Driver Enrollment</span>
+                            <span class="info-label" data-i18n="info.statusLabel">Status:</span>
+                            <span class="info-val text-orange" data-i18n="info.statusVal">Pilot Driver Enrollment</span>
                         </li>
                     </ul>
                 </div>
@@ -252,59 +257,59 @@
             <!-- Embedded FAQ & Policy Details -->
             <div class="footer-faq-block">
                 <div class="faq-header">
-                    <span class="faq-tag">POLICIES & DETAILS</span>
-                    <h2 class="faq-title">Frequently Asked Questions</h2>
-                    <p class="faq-subtitle">Clear information regarding our payout model, deductions, and Boston pilot policies.</p>
+                    <span class="faq-tag" data-i18n="faq.tag">POLICIES & DETAILS</span>
+                    <h2 class="faq-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+                    <p class="faq-subtitle" data-i18n="faq.subtitle">Clear information regarding our payout model, deductions, and Boston pilot policies.</p>
                 </div>
 
                 <div class="faq-list">
                     <details class="faq-item" open>
                         <summary class="faq-question">
-                            <span>How does the 100% earning transfer work?</span>
+                            <span data-i18n="faq.q1">How does the 100% earning transfer work?</span>
                             <span class="faq-icon">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>Uride is built with a driver-first philosophy. The fare paid by the rider for the trip is transferred directly to the driver once the ride is completed. Unlike legacy platforms, we do not take 40% to 50% arbitrary commission cuts.</p>
+                            <p data-i18n="faq.a1">Uride is built with a driver-first philosophy. The fare paid by the rider for the trip is transferred directly to the driver once the ride is completed. Unlike legacy platforms, we do not take 40% to 50% arbitrary commission cuts.</p>
                         </div>
                     </details>
 
                     <details class="faq-item" open>
                         <summary class="faq-question">
-                            <span>What deductions apply to my earnings?</span>
+                            <span data-i18n="faq.q2">What deductions apply to my earnings?</span>
                             <span class="faq-icon">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>To ensure full transparency: standard bank processing charges for electronic fund transfers and required commercial ride insurance are deducted. There are zero hidden platform markups—every deduction is itemized clearly on your trip summary.</p>
+                            <p data-i18n="faq.a2">To ensure full transparency: standard bank processing charges for electronic fund transfers and required commercial ride insurance are deducted. There are zero hidden platform markups—every deduction is itemized clearly on your trip summary.</p>
                         </div>
                     </details>
 
                     <details class="faq-item">
                         <summary class="faq-question">
-                            <span>When and where is the pilot launching?</span>
+                            <span data-i18n="faq.q3">When and where is the pilot launching?</span>
                             <span class="faq-icon">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>The initial pilot is limited to Greater Boston, Massachusetts (including Boston Core, Cambridge, Somerville, Allston/Brighton, and neighboring areas). Registered drivers will receive rolling invitations as pilot batches open.</p>
+                            <p data-i18n="faq.a3">The initial pilot is limited to Greater Boston, Massachusetts (including Boston Core, Cambridge, Somerville, Allston/Brighton, and neighboring areas). Registered drivers will receive rolling invitations as pilot batches open.</p>
                         </div>
                     </details>
 
                     <details class="faq-item">
                         <summary class="faq-question">
-                            <span>Can I drive for Uride while also driving for other apps?</span>
+                            <span data-i18n="faq.q4">Can I drive for Uride while also driving for other apps?</span>
                             <span class="faq-icon">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>Yes. You are completely independent. Participating in our Boston pilot runs does not prevent you from using other platforms.</p>
+                            <p data-i18n="faq.a4">Yes. You are completely independent. Participating in our Boston pilot runs does not prevent you from using other platforms.</p>
                         </div>
                     </details>
 
                     <details class="faq-item">
                         <summary class="faq-question">
-                            <span>What are the basic driver and vehicle requirements?</span>
+                            <span data-i18n="faq.q5">What are the basic driver and vehicle requirements?</span>
                             <span class="faq-icon">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>A valid Massachusetts driver's license, an eligible 4-door vehicle in clean mechanical condition, and standard personal auto insurance. Further onboarding instructions will be shared prior to your first pilot run.</p>
+                            <p data-i18n="faq.a5">A valid Massachusetts driver's license, an eligible 4-door vehicle in clean mechanical condition, and standard personal auto insurance. Further onboarding instructions will be shared prior to your first pilot run.</p>
                         </div>
                     </details>
                 </div>
@@ -314,10 +319,10 @@
             <div class="footer-bottom-bar">
                 <div class="footer-brand-info">
                     <img src="assets/logo-transparent.png" alt="Uride" class="footer-logo">
-                    <p class="footer-copy">&copy; 2026 Uride. All rights reserved. • Boston, Massachusetts</p>
+                    <p class="footer-copy" data-i18n="footer.copy">&copy; 2026 Uride. All rights reserved. • Boston, Massachusetts</p>
                 </div>
                 <div class="footer-back-to-top">
-                    <a href="#" class="btn-top">Back to top ↑</a>
+                    <a href="#" class="btn-top" data-i18n="footer.backToTop">Back to top ↑</a>
                 </div>
             </div>
 

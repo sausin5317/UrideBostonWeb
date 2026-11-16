@@ -220,6 +220,42 @@ button, a, input, select, textarea, summary {
     background: #EFF6FF;
 }
 
+/* Language Switcher */
+.lang-switcher {
+    display: inline-flex;
+    align-items: center;
+    background: #F1F5F9;
+    border: 1px solid #E2E8F0;
+    border-radius: var(--radius-full);
+    padding: 3px;
+    gap: 2px;
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: all 0.2s ease;
+}
+
+.lang-btn:hover:not(.active) {
+    color: var(--brand-blue);
+    background: rgba(10, 116, 248, 0.08);
+}
+
+.lang-btn.active {
+    background: var(--brand-blue);
+    color: #FFFFFF;
+    box-shadow: 0 2px 6px rgba(10, 116, 248, 0.3);
+}
+
 /* ==========================================================================
    MAIN CONTENT & TWO-COLUMN GRID
    ========================================================================== */
@@ -1199,7 +1235,9 @@ textarea {
     }
 
     .header-right {
-        gap: 10px;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
     }
 
     .location-badge {
@@ -1209,6 +1247,15 @@ textarea {
 
     .faq-nav-link {
         font-size: 0.82rem;
+        padding: 4px 8px;
+    }
+
+    .lang-switcher {
+        padding: 2px;
+    }
+
+    .lang-btn {
+        font-size: 0.72rem;
         padding: 4px 8px;
     }
 
@@ -1498,15 +1545,18 @@ textarea {
     }
 
     .location-badge {
-        font-size: 0.70rem;
-        padding: 4px 8px;
-        white-space: nowrap;
+        display: none;
     }
 
     .faq-nav-link {
         font-size: 0.74rem;
         padding: 4px 6px;
         white-space: nowrap;
+    }
+
+    .lang-btn {
+        font-size: 0.70rem;
+        padding: 4px 7px;
     }
 
     .promise-box {

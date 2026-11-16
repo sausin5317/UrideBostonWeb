@@ -15,16 +15,21 @@ Official web portal and driver pre-registration landing page for **Uride**, an u
 
 ## 🚀 Key Features
 
-1. **Driver Pre-Registration Form:**
+1. **Multi-Language Support (English, Español, Português):**
+   * Instant client-side language switcher (`EN` | `ES` | `PT`) in the navigation bar with zero page reload.
+   * Supports direct URL query parameters (`?lang=en`, `?lang=es`, `?lang=pt`) and persists language preference in `localStorage`.
+   * Automatically tags each driver registration with their preferred language (`English`, `Español`, or `Português`).
+
+2. **Driver Pre-Registration Form:**
    * Collects driver name, mobile number, email, Boston neighborhood, vehicle make/model/year, driving background, and availability.
    * Real-time client-side validation and responsive mobile layout.
 
-2. **Scannable QR Code & Social Sharing Hub:**
-   * Automatically generates a scannable QR code on the page for instant phone camera scanning.
+3. **Scannable QR Code & Social Sharing Hub:**
+   * Automatically generates a scannable QR code on the page (`https://www.uride-app.com/`) for instant phone camera scanning.
    * "Download QR Code" (PNG) and "Copy Page Link" buttons for promotional flyers.
    * One-click social sharing links for **WhatsApp**, **Facebook**, **X (Twitter)**, and **Instagram** (with native mobile Web Share API fallback).
 
-3. **Footer Policies & FAQ Accordion:**
+4. **Footer Policies & FAQ Accordion:**
    * Clean, accessible accordions explaining:
      * How the 100% earning transfer model works.
      * Itemized deductions (standard bank transaction charges and commercial insurance).
@@ -32,11 +37,9 @@ Official web portal and driver pre-registration landing page for **Uride**, an u
      * Non-exclusive driver policy (freedom to drive on other platforms).
      * Massachusetts vehicle and license requirements.
 
-4. **Multi-Channel Data Capture & Export:**
+5. **Multi-Channel Data Capture & Export:**
    * **Real-time Email Alerts:** Submissions are automatically dispatched to `brandaovicente4@gmail.com`.
    * **Google Sheets Auto-Sync:** Supported via Google Apps Script (`google_sheet_integration.js`).
-   * **Built-In Admin Roster:** Accessible via the "Driver Roster & Export" link in the footer.
-   * **1-Click CSV Export:** Downloads all captured applicant records directly into an Excel-compatible spreadsheet.
 
 ---
 
