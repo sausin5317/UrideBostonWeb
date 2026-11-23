@@ -165,7 +165,7 @@ button, a, input, select, textarea, summary {
 }
 
 .site-logo {
-    height: 44px;
+    height: 58px;
     width: auto;
     object-fit: contain;
 }
@@ -926,8 +926,9 @@ textarea {
 }
 
 .footer-logo {
-    height: 32px;
+    height: 46px;
     width: auto;
+    object-fit: contain;
 }
 
 .footer-copy {
@@ -1231,7 +1232,7 @@ textarea {
     }
 
     .site-logo {
-        height: 36px;
+        height: 48px;
     }
 
     .header-right {
@@ -1537,7 +1538,7 @@ textarea {
     }
 
     .site-logo {
-        height: 32px;
+        height: 42px;
     }
 
     .header-right {
@@ -1603,7 +1604,7 @@ textarea {
     }
 
     .site-logo {
-        height: 28px;
+        height: 38px;
     }
 
     .location-badge {
