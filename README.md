@@ -9,7 +9,7 @@ Official web portal and driver pre-registration landing page for **Uride**, an u
 * **Product:** Uride
 * **Operating Entity:** Happy Driver Rideshare Inc. (Allston, MA)
 * **Target Audience:** Greater Boston rideshare drivers (Uber, Lyft, Taxi, Livery, and prospective drivers).
-* **Core Value Proposition:** An app built for the driver — honest fares and 100% of ride earnings transferred directly to the driver after each completed ride.
+* **Core Value Proposition:** An app built for the driver — honest fares and 90%+ of ride earnings transferred directly to the driver after each completed ride.
 
 ---
 
@@ -31,7 +31,7 @@ Official web portal and driver pre-registration landing page for **Uride**, an u
 
 4. **Footer Policies & FAQ Accordion:**
    * Clean, accessible accordions explaining:
-     * How the 100% earning transfer model works.
+     * How the 90%+ earning transfer model works.
      * Itemized deductions (standard bank transaction charges and commercial insurance).
      * Boston pilot launch geographic scope.
      * Non-exclusive driver policy (freedom to drive on other platforms).
